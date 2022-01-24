@@ -24,7 +24,7 @@ const material = new THREE.MeshBasicMaterial({ color: '#ffffff', wireframe:true}
 var mesh1 = new THREE.Object3D();
 var loader = new STLLoader();
 
-loader.load('../head.stl', function ( geometry ) {
+loader.load('head.stl', function ( geometry ) {
 
 	const material1 = new THREE.MeshPhongMaterial( { color: 0xffffff} );
 	mesh1 = new THREE.Mesh( geometry, material1 );
@@ -39,7 +39,7 @@ loader.load('../head.stl', function ( geometry ) {
 
 var mesh2 = new THREE.Object3D();
 
-loader.load('../gear.stl', function ( geometry ) {
+loader.load('gear.stl', function ( geometry ) {
 
 	const material2 = new THREE.MeshPhongMaterial( { color: 0xffffff} );
 	mesh2 = new THREE.Mesh( geometry, material2 );
@@ -54,7 +54,7 @@ loader.load('../gear.stl', function ( geometry ) {
 
     var mesh3 = new THREE.Object3D();
 
-    loader.load('../megaphone.stl', function ( geometry ) {
+    loader.load('megaphone.stl', function ( geometry ) {
     
         const material3 = new THREE.MeshPhongMaterial( { color: 0xffffff} );
         mesh3 = new THREE.Mesh( geometry, material3 );
