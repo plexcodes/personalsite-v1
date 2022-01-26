@@ -1,26 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>Three.js Scroll Based Animation</title>
     <link rel="stylesheet" href="./style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap');
+    </style>
 </head>
 <body>
-    <canvas class="webgl"></canvas>
 
+
+    <canvas class="webgl"></canvas>
     <section class="section">
-        <h1>PLEX</h1>
-    </section>
-    <section class="section">
-        <h2>...</h2>
-    </section>
-    <section class="section">
-        <h2>...</h2>
-    </section>
+       <p>plex@cmd:~$ &nbsp;</p>
+        <div id="app"></div>
+        <script>
+          var app = document.getElementById('app');
     
+          var typewriter = new Typewriter(app, {
+            loop: true,
+            delay: 75,
+            cursor: '_'
+          });
+    
+          typewriter
+            .typeString(' audi, vide, tace, si tu vis vivere')
+            .pauseFor(2500)
+            .deleteAll()
+            .typeString(' imperare sibi maximum imperium est')
+            .pauseFor(2500)
+            .deleteAll()
+            .typeString(' fidite nemini')
+            .pauseFor(2500)
+            .deleteAll()
+            .typeString(' fronti nulla fides')
+            .pauseFor(2500)
+            .start();
+        </script>
+    </section>
+    <section class="section">
+        <div id="app1"></div>
+        <script>
+          var app = document.getElementById('app1');
+    
+          var typewriter = new Typewriter(app, {
+            delay: 150,
+            autostart: true,
+            cursor: '_'
+          });
+    
+          typewriter
+            .typeString('>Projects')
+            .start();
+        </script>
+        <div class="link"><a href="http://info1robotics.com">info1robotics</a></div>
+    </section>
+    <section class="section">
+        <div id="app2"></div>
+        <script>
+          var app = document.getElementById('app2');
+    
+          var typewriter = new Typewriter(app, {
+            delay: 150,
+            autostart: true,
+            cursor: '_'
+          });
+    
+          typewriter
+            .typeString('>Contact')
+            .start();
+        </script>
+    </section>
     <script type="module" src="./three.min.js"></script>
     <script type="module" src="./gsap.min.js"></script>
     <script type="module" src="./main.js"></script>
+
 </body>
 </html>

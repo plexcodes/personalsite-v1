@@ -1,5 +1,11 @@
 import * as THREE from 'three';
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js';
+
+// typewriter
+//   .typeString('A simple yet powerful native javascript')
+//   .pauseFor(300)
+//   .start();
+
 /**
  * Base
  */
@@ -287,7 +293,7 @@ const tick = () =>
         mesh2.position.z = 0;
   } else {
         mesh1.position.z = 0;
-        mesh1.position.x = 0;
+        mesh1.position.x = 1.5;
         mesh1.position.y = 0;
     
         mesh3.position.y = - objectsDistance * 2 ;
@@ -295,7 +301,7 @@ const tick = () =>
         mesh3.position.z = 0;
             
         mesh2.position.y = - objectsDistance * 1 ;
-        mesh2.position.x = -1.5;
+        mesh2.position.x = 1.5;
         mesh2.position.z = 0;
   }
 
