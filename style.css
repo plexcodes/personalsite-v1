@@ -1,15 +1,21 @@
 *
 {
     font-family: 'Inconsolata', monospace;
+    font-size: 2vw;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
+@media only screen and (max-width: 600px) {
+  *{
+     font-size: 2vh; 
+  }
+}
 html
 {
     background: #000000;
 }
-
 .webgl
 {
     position: fixed;
@@ -26,21 +32,17 @@ html
     position: relative;
 
     color: #ffffff;
-    font-size: 30px;
     padding-left:10vw;
     padding-right: 10%;
     will-change: transform;
-}
+    
+  }
 
 
 #app{
+position: relative;
 color:#ffffff;
-margin-right: 25vw;
-font-size: 30px;
 }
-#app1{
-    margin-bottom: 7.5vh;
-    }
 
 
  a{}
@@ -51,8 +53,18 @@ font-size: 30px;
     text-decoration: none;
     color: gray;
   }
-  .link{
 
-    position:fixed;
-    margin-top:0vh;
+
+  .link{position:absolute;}
+  .text{position:absolute;
+    margin-top:-10vh;
   }
+
+
+
+  .contact{
+    position: relative;
+  }
+
+  .terminal {animation: blink 1s infinite step-end;}
+	@keyframes blink {from,           to { opacity: 0; }          50% {opacity: 1;}}
