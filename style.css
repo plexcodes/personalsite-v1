@@ -1,4 +1,4 @@
-*
+body
 {
     font-family: 'Inconsolata', monospace;
     font-size: 2vw;
@@ -7,10 +7,16 @@
     overflow-x: hidden;
 }
 
-@media only screen and (max-width: 600px) {
-  *{
-     font-size: 2vh; 
-  }
+
+.content{
+  padding-right: 10%;
+  padding-left:10vw;
+}
+.content1{
+  padding-left:10vw;
+}
+.content2{
+  padding-left:10vw;
 }
 html
 {
@@ -32,10 +38,8 @@ html
     position: relative;
 
     color: #ffffff;
-    padding-left:10vw;
-    padding-right: 10%;
+
     will-change: transform;
-    
   }
 
 
@@ -68,3 +72,22 @@ color:#ffffff;
 
   .terminal {animation: blink 1s infinite step-end;}
 	@keyframes blink {from,           to { opacity: 0; }          50% {opacity: 1;}}
+
+
+@media only screen and (max-width: 600px) {
+  .content{
+    margin-top:25vh;
+    font-size: 4.6vw;
+  }
+  .content1{
+    padding-left: 22.5vw;
+    font-size: 7vw;
+  }
+  .content2{
+    padding-left: 30vw;
+    font-size: 7vw;
+  }
+  .content1 .text{
+    position:unset;
+  }
+}

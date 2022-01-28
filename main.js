@@ -142,9 +142,12 @@ window.addEventListener('resize', () =>
 let scrollY = window.scrollY
 let currentSection = 0
 
+
+
 window.addEventListener('scroll', () =>
 {
     scrollY = window.scrollY
+    if(window.height<window.width){
     const newSection = Math.round(scrollY / sizes.height)
 
     if(newSection != currentSection)
@@ -194,6 +197,7 @@ window.addEventListener('scroll', () =>
             }
         )
     }
+}
 })
 
 /**
