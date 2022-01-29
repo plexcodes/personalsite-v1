@@ -147,7 +147,6 @@ let currentSection = 0
 window.addEventListener('scroll', () =>
 {
     scrollY = window.scrollY
-    if(window.height<window.width){
     const newSection = Math.round(scrollY / sizes.height)
 
     if(newSection != currentSection)
@@ -197,7 +196,7 @@ window.addEventListener('scroll', () =>
             }
         )
     }
-}
+
 })
 
 /**
@@ -207,12 +206,13 @@ const cursor = {}
 cursor.x = 0
 cursor.y = 0
 
+if(window.height>window.width){
 window.addEventListener('mousemove', (event) =>
 {
     cursor.x = event.clientX / sizes.width - 0.5
     cursor.y = event.clientY / sizes.height - 0.5
 })
-
+}
 /**
  * Camera
  */
